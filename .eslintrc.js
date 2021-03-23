@@ -23,7 +23,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'import/no-extraneous-dependencies': [2, { devDependencies: true }],
     'react/forbid-prop-types': 0,
-    'react/no-unused-prop-types': isProduction? 2 : 1,
+    'react/no-unused-prop-types': isProduction ? 2 : 1,
     'react/sort-prop-types': [1, { callbacksLast: true }],
     'react/jsx-no-bind': 2,
     'react/jsx-sort-props': [1, { callbacksLast: true }],
