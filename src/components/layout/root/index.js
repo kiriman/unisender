@@ -26,7 +26,7 @@ import { ROOT, USERS } from 'router/routes'
 import { useStyles } from './styles'
 
 // eslint-disable-next-line no-shadow
-function Root({ window, route }) {
+function Root({ route }) {
   const location = useLocation()
   const classes = useStyles()
   const theme = useTheme()
@@ -67,8 +67,7 @@ function Root({ window, route }) {
     </div>
   )
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined
+  const container = window !== undefined ? window.document.body : undefined
 
   return (
     <div className={classes.root}>
@@ -134,7 +133,7 @@ Root.propTypes = {
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window: PropTypes.func.isRequired,
+  // window: PropTypes.func.isRequired,
 }
 
 export default Root
