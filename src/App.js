@@ -21,6 +21,9 @@ function App() {
       </Helmet>
 
       {renderRoutes(routes)}
+
+      <script src="/__/firebase/8.3.1/firebase-app.js" />
+      <script src="/__/firebase/init.js" />
     </div>
   )
 }
