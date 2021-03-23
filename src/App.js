@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { renderRoutes } from 'react-router-config'
+
+import routes from './router'
+
+import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Helmet>
+        <meta
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+          name="viewport"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
+
+      {renderRoutes(routes)}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
